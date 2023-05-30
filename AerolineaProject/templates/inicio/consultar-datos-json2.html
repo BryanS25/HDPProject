@@ -1,0 +1,19 @@
+{% extends 'layout/base_bootstrap.html' %}
+
+{% block titulo %}
+    Datos
+{% endblock titulo %}
+
+{% block content %}
+    <h1>Datos</h1>
+        <form>
+            <label for="userId">userId</label><br>
+            <input type="text" size="170" name="userId" id="userId" value="{{ usuario.userId }}"><br>
+            <label for="id">id</label><br>
+            <input type="text" size="170" name="id" id="id" value="{{ usuario.id }}"><br>
+            <label for="title">title</label><br>
+            <input type="text" size="170" name="title" id="title" value="{{ usuario.title }}"><br>
+            <label for="body">body</label><br>
+            <input type="text" size="170" name="body" id="body" value="{{ usuario.body }}"><br>
+        </form>     
+{% endblock content %}
