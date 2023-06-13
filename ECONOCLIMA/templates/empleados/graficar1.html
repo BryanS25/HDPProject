@@ -1,0 +1,36 @@
+{% extends 'layout/base_bootstrap.html' %}
+
+
+{% block titulo %}
+    Cripto prices
+{% endblock titulo %}
+
+
+{% block content %}
+    <br><h1>Econoclima</h1>
+    
+        <br><p class="p2">Bienvenido a nuestro sitio web donde mostraremos los impactos económicos debidos al cambio 
+                            climático en El Salvador durante los últimos 5 años. <br><br> 
+                            Aquí encontrarás información detallada sobre cómo este fenómeno global ha afectado diferentes sectores 
+                            clave de la economía salvadoreña. A través de gráficos presentaremos los impactos en la agricultura, salud, 
+                            turismo e infraestructura mostrando las perdidas en dólares que cada año ha generado dentro de cada sector.
+                            Esperamos que esta información sea útil para sensibilizar y promover acciones encaminadas a mitigar y adaptarnos
+                            a los desafíos que presenta esta problemática global.</p>
+            </p>
+        <a href="{% url 'econoclima_app:agricultura' %}"> <img src="data:image/png;base64, {{ graphic }}" alt="Gráfico"></a>        
+        <a href="{% url 'econoclima_app:infraestructura' %}"> <img src="data:image/png;base64, {{ graphic2 }}" alt="Gráfico2"></a>        
+        <a href="{% url 'econoclima_app:salud' %}"> <img src="data:image/png;base64, {{ graphic3 }}" alt="Gráfico3"></a>        
+        <a href="{% url 'econoclima_app:turismo' %}"> <img src="data:image/png;base64, {{ graphic4 }}" alt="Gráfico4"></a>
+        <p class="p">(Hacer click en un gráfico para ampliar su información)</p>
+        
+
+        <style>
+            .p{
+                text-align: center;
+            }
+            .p2{
+                text-align: justify;
+            }
+        </style>
+{% endblock content %}
+    

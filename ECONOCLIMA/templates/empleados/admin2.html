@@ -1,0 +1,13 @@
+<script>
+    function usrpas(){
+    if (document.form1.txt.value=="admin" && document.form1.num.value=="admin"){window.location="http://127.0.0.1:8000/empleado/lista-empleados"}
+    
+    else {alert("Error en Usuario o Contraseña. Intenta de nuevo.")}
+    }
+    document.oncontextmenu=new Function("return false");
+</script>
+    <form name="form1">
+    <input type="text" name="txt"> Usuario<br>
+    <input type="text" name="num"> Contraseña<br>
+    <input type="button" value="ir a.." onclick="usrpas()">
+    </form>

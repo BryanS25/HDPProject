@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}
+{{ titulo }}
+{% endblock titulo %}
+
+{% block content %}
+   <h1>{{ titulo }}</h1> 
+    <a href="">Nuevo Dato</a>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Nombre</th></tr>
+        </thead>
+        <tbody>
+            {% for e in lista %}
+               <tr>
+                <td>{{ e.id }}</td><td>{{ e.nombre }}</td>
+               </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
